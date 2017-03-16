@@ -1,0 +1,332 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #d6d6d6;
+	font-family: 'Courgette', cursive;
+font-family: 'Tangerine', cursive;
+font-size: 30px;
+}
+
+.container {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+}
+
+/*
+
+=============================================================
+==========================================
+
+ Header
+
+==========================================
+=============================================================
+
+*/
+
+.banner {
+	background-image: url(banner.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+header {
+	width: 80%;
+	height: 100px;
+	margin: 0 auto;
+	background-color: #d10100;
+}
+
+.logo {
+	width: 30%;
+	height: 100%;
+	float: left;
+}
+
+.logo h3 {
+	padding-top: 5px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 55px;
+}
+
+.nav {
+	width: 60%;
+	height: auto;
+	float: right;
+}
+
+.nav ul {
+	width: 100%;
+	height: auto;
+	margin-left: 150px;
+    margin-top: 248px;
+
+}
+
+.nav ul li {
+	list-style-type: none;
+	display: inline;
+	border-right: 1px solid white;
+}
+
+.nav ul li:last-child {
+	border-right: 0;
+}
+
+.nav ul li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'PT Sans', sans-serif;
+	color: #ccccc4;
+	font-size: 14px;
+    padding: 10px 15px;
+    margin-left: -4px;
+}
+
+.nav ul li a:hover {
+	cursor: pointer;
+	color: white;
+
+}
+
+/*
+
+=============================================================
+==========================================
+
+ Banner
+
+==========================================
+=============================================================
+
+*/
+
+
+.banner {
+	width: 1079px;
+    height: 280px;
+}
+
+/*
+
+=============================================================
+==========================================
+
+ Main
+
+==========================================
+=============================================================
+
+*/
+
+main {
+	overflow: hidden;
+}
+
+
+.center {
+	width: 69%;
+	height: auto;
+	margin: 0 auto;
+}
+
+/*.main_gallery img {
+	height: 300px; 
+	width: 49%;
+}*/
+
+.slider {
+
+}
+
+ h4 {
+	background-color: #0a6b2c;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+    width: 100%;
+}
+
+.side h3 {
+	background-color: #d10100;
+	color: white;
+	padding: 15px;
+	border-radius: 60px 0;
+	letter-spacing: 1px;
+	padding-left: 30px;
+
+}
+
+.cat nav {
+	    margin-left: 30px;
+    padding: 15px;
+}
+
+.cat nav ul li {
+	text-transform: uppercase;
+    font-size: 13px;
+    padding: 5px;
+    border-bottom: 1px solid #d10100;
+    width: 269px;	
+}
+
+.cat nav ul li a {
+	  text-decoration: none;
+	  color: black;
+}
+
+.cat nav ul li a:hover {
+	background-color: #5b5959;
+	color: white;
+	padding-left: 50px;
+}
+
+.news button {
+	border: 0;
+	padding: 10px;
+	background-color: #5b5959;
+	color: #c4cccc;
+	margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.news button:hover {
+	background-color: #7a7979;
+	padding: 10px 20px;
+	color: #dedede;
+	cursor: pointer;
+}
+
+.details h3 {
+	background-color: #0a6b2c;
+    overflow: hidden;
+    color: white;
+    padding: 15px;
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+}
+
+.center div {
+	margin: 20px 0;
+}
+
+footer {
+	width: 80%;
+	height: 100px;
+	margin: 0 auto;
+	background-color: #0a6b2c;
+}
+
+footer .logo {
+	width: 30%;
+	height: 100%;
+	float: left;
+}
+
+footer .logo h3 {
+	padding-top: 5px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 55px;
+}
+
+footer .write {
+	color: white;
+	float: right;
+	margin-top: 25px;
+}
+
+footer p {
+	font-size: 20px;
+}
+
+
+
+
+/*
+
+=============================================================
+==========================================
+
+ Slider
+
+==========================================
+=============================================================
+
+*/
+
+
+/* image gallery*/
+.slider{
+    width: 500px;
+    height: 114px; /*Same as width of the large image*/
+    position: relative;
+    /*Instead of height we will use padding*/
+    padding-top: 320px; /*That helps bring the labels down*/
+    
+    margin-left: 35%;
+    margin-top: 5%;
+    
+    /*Lets add a shadow*/
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+
+/*Last thing remaining is to add transitions*/
+.slider>img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0; top: 0;
+    transition: all 0.5s;
+}
+
+.slider input[name='slide_switch'] {
+    display: none;
+}
+
+.slider label {
+    /*Lets add some spacing for the thumbnails*/
+    margin: 150px 0px 21px 15px;
+    border: 3px solid #999;
+    
+    float: left;
+    cursor: pointer;
+    
+    
+    /*Default style = low opacity*/
+    opacity: 0.6;
+}
+
+.slider label img{
+    display: block;
+}
+
+/*Time to add the click effects*/
+.slider input[name='slide_switch']:checked+label {
+    border-color: #666;
+    opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.slider input[name='slide_switch'] ~ img {
+    opacity: 0;
+    transform: scale(1.1);
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.slider input[name='slide_switch']:checked+label+img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
